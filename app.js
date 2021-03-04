@@ -15,6 +15,7 @@ app.set('view engine', 'ejs');
 // app.set('views', 'myviews');
 
 app.get('/', (req, res) => {
+  const fetchPromise = fetch('https://jsonplaceholder.typicode.com/albums/');
   const blogs = [
     {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
     {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
